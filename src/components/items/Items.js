@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Table } from 'semantic-ui-react'
 import Item from './Item';
 
-const Items = ({ items }) => (
+const Items = ({ items, deleteItem, updateItem }) => (
   <Table celled padded>
     <Table.Header>
       <Table.Row>
@@ -18,6 +18,8 @@ const Items = ({ items }) => (
           <Item
           key={i.id}
           {...i}
+          deleteItem={deleteItem}
+          updateItem={updateItem} 
           />
         ))
       }

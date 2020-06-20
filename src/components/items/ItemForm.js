@@ -8,6 +8,14 @@ class ItemForm extends React.Component {
 
 handleSubmit = (e) => {
   e.preventDefault();
+  if (this.props.id) {
+    this.props.updateItem( this.props.id, this.state )
+  } else {
+    // add the contact to the array of obj
+    this.props.addItem(this.state)
+  }
+  // clear out the form
+  this.setState({ itemName: '', price: '' })
 }
 
 handleChange = (e) => {
