@@ -8,7 +8,9 @@ const Items = ({ items, deleteItem, updateItem }) => (
       <Table.Row>
         <Table.HeaderCell>Item</Table.HeaderCell>
         <Table.HeaderCell>Price ($)</Table.HeaderCell>
+        <Table.HeaderCell>Complete</Table.HeaderCell>
         <Table.HeaderCell>Actions</Table.HeaderCell>
+
       </Table.Row>
     </Table.Header>
 

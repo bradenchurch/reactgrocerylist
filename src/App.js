@@ -38,6 +38,17 @@ class App extends Component {
     this.setState({ items: [...items] });
   }
 
+  updateItem = (id, updatedItem) => {
+    const { items } = this.state;
+    this.setState({
+      items: items.map( i => {
+        if (i.id === id) {
+          return { ...updatedItem }
+        }
+        return i
+      })
+    })
+  }
 
   render() {
     const { showForm } = this.state;
@@ -46,7 +57,12 @@ class App extends Component {
         <div>
         <Container>
           <Header as="h1" textAlign='center'>React Grocery List</Header>
-          <Items items={this.state.items} deleteItem={this.deleteItem}/>
+          <Items items={this.state.items} 
+            deleteItem={this.deleteItem} 
+            updateItem={this.updateItem} 
+          />
+          {/* <Items items={this.state.items} deleteItem={this.deleteItem}/> This works but trying something else */}
+          {/* <Items items={this.state.items} updateItem={this.updateItem}/> */}
         </Container>
         </div>
         { <Button icon color='blue' onClick={this.toggleForm}>
