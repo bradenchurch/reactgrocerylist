@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Table } from 'semantic-ui-react'
+import { Table } from 'semantic-ui-react'
 import Item from './Item';
 
 const Items = ({ items, deleteItem, updateItem }) => (
@@ -7,7 +7,7 @@ const Items = ({ items, deleteItem, updateItem }) => (
     <Table.Header>
       <Table.Row>
         <Table.HeaderCell>Item</Table.HeaderCell>
-        <Table.HeaderCell>Price($)</Table.HeaderCell>
+        <Table.HeaderCell>Price ($)</Table.HeaderCell>
         <Table.HeaderCell>Actions</Table.HeaderCell>
       </Table.Row>
     </Table.Header>

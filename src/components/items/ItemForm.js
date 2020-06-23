@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Form } from 'semantic-ui-react';
 
 
-class ItemForm extends React.Component {
-  state = { itemName: "", price: "" } ;
+class ItemForm extends Component {
+  state = { itemName: "", price: "" }
 
 
 handleSubmit = (e) => {

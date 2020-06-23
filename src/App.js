@@ -16,6 +16,7 @@ class App extends Component {
 
 
   toggleForm = () => this.setState({ showForm: !this.state.showForm })
+
   getId = () => {
     return Math.floor((1 + Math.random()) * 0x10000)
       .toString(16)
@@ -23,7 +24,7 @@ class App extends Component {
   };
 
   addItem = (incomingItem) => {
-    const { items } = this.state;
+    const { items } = this.state
     const newItem = { id: this.getId(), ...incomingItem }
     this.setState({ items: [ newItem, ...items ]})
   }
@@ -34,19 +35,19 @@ class App extends Component {
         return item
       }
     })
-    this.setState({ items })
+    this.setState({ items: [...items] });
   }
 
 
   render() {
-    const { items, showForm } = this.state;
+    const { showForm } = this.state;
     return(
       <div>
         <div>
         <Container>
-        <Header as="h1" textAlign='center'>React Grocery List</Header>
-        <Items items={this.state.items} />
-      </Container>
+          <Header as="h1" textAlign='center'>React Grocery List</Header>
+          <Items items={this.state.items} deleteItem={this.deleteItem}/>
+        </Container>
         </div>
         { <Button icon color='blue' onClick={this.toggleForm}>
             <Icon name={ showForm ? 'angle up': 'angle down'} />
