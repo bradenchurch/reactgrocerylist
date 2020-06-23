@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form } from 'semantic-ui-react';
+import { Form, Container } from 'semantic-ui-react';
 
 
 class ItemForm extends Component {
@@ -24,6 +24,7 @@ handleChange = (e) => {
 
 render() {
   return (
+    <Container> 
     <Form onSubmit={this.handleSubmit}>
       <Form.Group widths="equal">
         <Form.Input 
@@ -45,6 +46,7 @@ render() {
         <Form.Button>Submit</Form.Button>
       </Form.Group>
     </Form>
+    </Container>
   )  
  }
 }
