@@ -61,8 +61,6 @@ class App extends Component {
             deleteItem={this.deleteItem} 
             updateItem={this.updateItem} 
           />
-          {/* <Items items={this.state.items} deleteItem={this.deleteItem}/> This works but trying something else */}
-          {/* <Items items={this.state.items} updateItem={this.updateItem}/> */}
         </Container>
         </div>
         { <Button icon color='blue' onClick={this.toggleForm}>

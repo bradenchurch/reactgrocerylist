@@ -34,6 +34,7 @@ render() {
           name="itemName" 
           value={this.state.itemName} 
           onChange={this.handleChange}
+          required
         />
         <Form.Input 
           fluid 
@@ -42,6 +43,7 @@ render() {
           name="price" 
           value={this.state.price} 
           onChange={this.handleChange}
+          required
         />
         <Form.Button>Submit</Form.Button>
       </Form.Group>
